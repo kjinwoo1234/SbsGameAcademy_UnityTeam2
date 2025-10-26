@@ -350,11 +350,11 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★★★★");
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★☆☆");
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★★☆☆");
         }
     }
 
@@ -372,11 +372,11 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★☆☆☆");
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★★★");
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★★★☆");
         }
     }
 
@@ -394,11 +394,11 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★☆☆☆");
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★☆☆");
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★★☆☆");
         }
     }
 
@@ -416,11 +416,11 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★★☆☆");
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★★☆");
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
+            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★☆☆☆");
         }
     }
 
@@ -462,19 +462,23 @@ namespace Mud_game
         }
 
         /// 스탯을 ★로 표시
-        public static void DrawStars(int x, int y, int rating, int max)
+        public static void DrawStars(int x, int y, string starsString)
         {
-            string stars = "";
-            stars += new string('★', rating);
-            stars += new string('☆', max - rating);
-
             DrawText(x, y, "|");
+
+            // 별 문자열을 분리하여 색상 적용
+            int filledStarsCount = starsString.Count(f => f == '★');
+            string filledStars = starsString.Substring(0, filledStarsCount);
+            string emptyStars = starsString.Substring(filledStarsCount);
+
             Console.ForegroundColor = ConsoleColor.Yellow;
-            DrawText(x + 1, y, stars.Substring(0, rating));
+            DrawText(x + 1, y, filledStars);
+
             Console.ForegroundColor = ConsoleColor.Gray;
-            DrawText(x + 1 + rating, y, stars.Substring(rating));
+            DrawText(x + 1 + filledStarsCount, y, emptyStars);
+
             Console.ResetColor();
-            DrawText(x + 1 + max, y, "|");
+            DrawText(x + 1 + starsString.Length, y, "|");
         }
     }
 }

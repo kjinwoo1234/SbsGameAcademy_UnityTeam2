@@ -182,6 +182,28 @@ public static class Shop
             "      ■ ■    ",
         };
 
+        string[] leatherArmor = new string[]
+        {
+            "      ■ ■       ",
+            "   ■       ■    ",
+            "    ■     ■     ",
+            "      ■ ■       ",
+            "    ■     ■     ",
+            "   ■ ===== ■   ",
+            "   ■■   ■■    ",
+        };
+
+        string[] ironArmor = new string[]
+        {
+            "       ■ ■       ",
+            "    ■      ■    ",
+            "  ■  ■  ■  ■     ",
+            "    ■■  ■■       ",
+            "    ■      ■     ",
+            "   ■  ■■  ■   ",
+            "   ■■    ■■    ",
+        };
+
         string[] hpPotion = new string[]
         {
             "        ■   + ",
@@ -280,6 +302,24 @@ public static class Shop
             5,
             100,
             shieldIron
+        ));
+
+        AvailableArmor.Add(new Armor(
+            "가죽 갑옷",
+            "두꺼운 가죽으로 만든 갑옷. 질겨서 잘찢기지 않는다",
+            "검사",
+            8,
+            120,
+            leatherArmor
+        ));
+
+        AvailableArmor.Add(new Armor(
+            "철 갑옷",
+            "단단한 철로 만든 갑옷. 내구성은 뛰어나나 열에 약하다",
+            "검사",
+            14,
+            300,
+            ironArmor
         ));
 
         AvailablePotion.Add(new Potion(

@@ -160,6 +160,126 @@ public static class Shop
             "     ●          ",
         };
 
+        string[] twoSwords = new string[]
+        {
+            "      ▲        ▲     ",
+            "      ■        ■     ",
+            "      ■        ■     ",
+            "     □□      □□    ",
+            "      □        □     ",
+        };
+
+        string[] middleSword = new string[]
+        {
+            "      ▲            ",
+            "      ■            ",
+            "      ■            ",
+            "      ■            ",
+            "      ■            ",
+            "     ◇◇          ",
+            "      ◇            ",
+        };
+
+        string[] shuriken = new string[]
+        {
+            "                    ",
+            "     ◆             ",
+            "   ◆◆◆    ◆     ",
+            " ◆◆○◆◆◆  ◆   ",
+            "   ◆◆◆    ◆     ",
+            "     ◆             ",
+            "                    ",
+        };
+
+
+        string[] flamingBow = new string[]
+        {
+            "            ▓〓〓   ",
+            "         ▓▓〓   I    ",
+            "        ▓〓〓☆ I    ",
+            "       ▓〓〓  ★I    ",
+            "   ☆ ▓▓〓〓☆  I    ",
+            "  ←〓▓〓〓〓〓〓〓〓 ",
+            "   ☆ ▓▓〓〓☆  I    ",
+            "       ▓〓〓  ★I    ",
+            "        ▓〓〓☆ I    ",
+            "         ▓▓〓   I    ",
+             "            ▓〓〓    ",
+        };
+
+        string[] flamingArrow = new string[]
+        {
+            "    ☆     △    ★   ",
+            "           §         ",
+            "           §         ",
+            "           § ★      ",
+            "       ☆  §         ",
+            "           §         ",
+            "           §         ",
+            "           §      ☆ ",
+            "        ★ §         ",
+            "          ↗↖        ",
+        };
+
+        string[] frozenBow = new string[]
+        {
+            "            ▓〓〓    ",
+            "         ▓▓〓   I    ",
+            "        ▓〓〓※ I    ",
+            "       ▓〓〓  ◎I    ",
+            "   ※ ▓▓〓〓※  I    ",
+            "  ←〓▓〓〓〓〓〓〓〓 ",
+            "   ※ ▓▓〓〓※  I    ",
+            "       ▓〓〓  ◎I    ",
+            "        ▓〓〓※ I    ",
+            "         ▓▓〓   I    ",
+            "     ◎     ▓〓〓    ",
+
+        };
+
+        string[] frozenArrow = new string[]
+        {
+            "           △    ◎   ",
+            "       ※  §         ",
+            "           §         ",
+            "           § ※      ",
+            "           §         ",
+            "       ※  §         ",
+            "           §         ",
+            "           §     ◎  ",
+            "        ※ §         ",
+            "     ◎   ↗↖        ",
+        };
+
+        string[] poisoningBow = new string[]
+        {
+            "            ▓〓〓    ",
+            "         ▓▓〓 ◐I    ",
+            "        ▓〓〓   I    ",
+            "       ▓〓〓    I    ",
+            "   ◐ ▓▓〓〓◑  I    ",
+            "  ←〓▓〓〓〓〓〓〓〓 ",
+            "      ▓▓〓〓    I    ",
+            "       ▓〓〓    I    ",
+            "        ▓〓〓 ◑I    ",
+            "         ▓▓〓   I    ",
+             "      ◑    ▓〓〓   ",
+        };
+
+        string[] poisoningArrow = new string[]
+        {
+            "           △   ◑    ",
+            "       ◐  §         ",
+            "        ◐ §         ",
+            "           § ◐      ",
+            "           §         ",
+            "       ◑  §         ",
+            "           §         ",
+            "           § ◑      ",
+            "        ◐ §         ",
+            "     ◑   ↗↖        ",
+        };
+
         string[] shieldWood = new string[]
         {
             "   ■ ■ ■ ■   ",
@@ -204,6 +324,50 @@ public static class Shop
             "   ■■    ■■    ",
         };
 
+        string[] bronzeArmor = new string[]
+        {
+            "      ■  ■       ",
+            "   ■        ■    ",
+            "  ■  ■  ■  ■     ",
+            "      ■  ■       ",
+            "    ■      ■     ",
+            "   ■  ■■  ■   ",
+            "  ■ ■    ■ ■    ",
+        };
+
+        string[] nikelArmor = new string[]
+        {
+            "      ■  ■       ",
+            "   ■■    ■■    ",
+            "  ■■■  ■■■     ",
+            "    ■■  ■■       ",
+            "    ■■  ■■     ",
+            "   ■  ■■  ■   ",
+            "  ■ ■    ■ ■    ",
+        };
+
+        string[] diamondArmor = new string[]
+        {
+            "    ■■    ■■       ",
+            "   ■  ■  ■  ■      ",
+            "   ■■■★■■■      ",
+            " ■■■■  ■■■■      ",
+            "   ■■■★■■■      ",
+            "   ■  ■  ■  ■      ",
+            "   ■ ■    ■ ■      ",
+        };
+
+        string[] endingArmor = new string[]
+        {
+            "     ☆      ☆     ",
+            "   ■■■☆■■■      ",
+            "   ■■■★■■■      ",
+            " ■■■■☆■■■■      ",
+            "   ■■■★■■■      ",
+            "   ■  ■  ■  ■      ",
+            "   ■■■  ■■■      ",
+        };
+
         string[] hpPotion = new string[]
         {
             "        ■   + ",
@@ -226,7 +390,7 @@ public static class Shop
         AvailableWeapons.Add(new Weapon(
             "단검",
             "연습용으로 제작된 단검. 실전에서도 유용하다",
-            "전사",
+            "전사,암살자",
             2,
             25,
             swordShort
@@ -248,6 +412,33 @@ public static class Shop
             6,
             100,
             spearIron
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "이도류",
+            "기습에 유용한 1쌍 단검. 공격속도가 월등하다",
+            "암살자",
+            2,
+            70,
+            twoSwords
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "은검",
+            "단검보다 길고, 창보다 짧은 검. 암살자들의 주요 무기 중 하나.",
+            "암살자",
+            5,
+            100,
+            middleSword
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "수리검",
+            "원거리형 투창식 검. 완벽한 암살자는 보이지 않는 곳에서도 임무를 완수한다.",
+            "암살자",
+            8,
+            180,
+            shuriken
         ));
 
         AvailableWeapons.Add(new Weapon(
@@ -286,6 +477,60 @@ public static class Shop
             lightCane
         ));
 
+        AvailableWeapons.Add(new Weapon(
+            "불붙은 활",
+            "활대에 불꽃이 타오르는 강력한 활. 공격 시 추가 화염 피해를 입힌다.",
+            "궁수",
+            6,
+            100,
+            flamingBow
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "불꽃 화살",
+            "불꽃이 타오르는 화살. 공격 시 추가 화염 피해를 입힌다.",
+            "궁수",
+            8,
+            2,
+            flamingArrow
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "얼어붙은 활",
+            "주변에서도 한기가 느껴지는 얼어붙은 활. 공격 시 적이 일시적으로 느려진다.",
+            "궁수",
+            8,
+            150,
+            frozenBow
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "빙결 화살",
+            "화살촉이 얼어붙은 화살. 공격 시 적이 일시적으로 느려진다.",
+            "궁수",
+            7,
+            2,
+            frozenArrow
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "독이 뭍은 활",
+            "치명적인 독이 저장된 활. 공격 시 적이 중독상태에 빠진다.",
+            "궁수",
+            11,
+            250,
+            poisoningBow
+        ));
+
+        AvailableWeapons.Add(new Weapon(
+            "중독 화살",
+            "독이 응축된 화살촉의 화살. 공격 시 적이 중독상태에 빠진다.",
+            "궁수",
+            6,
+            2,
+            poisoningArrow
+        ));
+
         AvailableArmor.Add(new Armor(
             "나무방패",
             "나무로 제작한 기본방패. 피해를 감경시킨다",
@@ -307,7 +552,7 @@ public static class Shop
         AvailableArmor.Add(new Armor(
             "가죽 갑옷",
             "두꺼운 가죽으로 만든 갑옷. 질겨서 잘찢기지 않는다",
-            "검사",
+            "공용",
             8,
             120,
             leatherArmor
@@ -316,10 +561,46 @@ public static class Shop
         AvailableArmor.Add(new Armor(
             "철 갑옷",
             "단단한 철로 만든 갑옷. 내구성은 뛰어나나 열에 약하다",
-            "검사",
+            "공용",
             14,
             300,
             ironArmor
+        ));
+
+        AvailableArmor.Add(new Armor(
+            "청동 갑옷",
+            "청동을 제련해서 만든 갑옷. 철보다 단단하진 않지만 내구성이 좋다",
+            "공용",
+            12,
+            240,
+            bronzeArmor
+        ));
+
+        AvailableArmor.Add(new Armor(
+            "니켈 갑옷",
+            "니켈광물을 제련하여 만든갑옷. 내구성, 열에 모두 강하다",
+            "공용",
+            25,
+            450,
+            nikelArmor
+        ));
+
+        AvailableArmor.Add(new Armor(
+            "다이아 갑옷",
+            "다이아 광물을 제련하여 만든 갑옷. 내구성은 최강, 열에는 생각보다 취약",
+            "공용",
+            50,
+            600,
+            diamondArmor
+        ));
+
+        AvailableArmor.Add(new Armor(
+            "최종 갑옷",
+            "모든 능력을 갖춘 갑옷. 전장을 지배하는 자의 자격에 적합하다",
+            "공용",
+            300,
+            1000000,
+            endingArmor
         ));
 
         AvailablePotion.Add(new Potion(
@@ -408,7 +689,53 @@ public static class ConsoleUI
             if (startY + i < boxHeight - 2)
             {
                 SafeSetCursorPosition(iconX, startY + i);
-                Console.Write(weapon.WeaponIcon[i]);
+
+                foreach (char c in weapon.WeaponIcon[i])
+                {
+                    if (weapon.WeaponName == "불붙은 활" || weapon.WeaponName == "불꽃 화살")
+                    {
+                        if (c == '★' || c == '☆' || c == '←' || c == '△')
+                            Console.ForegroundColor = (i % 2 == 0) ? ConsoleColor.Yellow : ConsoleColor.Red; // 깜빡이는 불빛
+                        else if (c == '〓')
+                            Console.ForegroundColor = ConsoleColor.DarkGray; // 화살대
+                        else if (c == '▓')
+                            Console.ForegroundColor = ConsoleColor.DarkYellow; // 활대
+                        else
+                            Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else if(weapon.WeaponName == "얼어붙은 활" || weapon.WeaponName == "빙결 화살")
+                    {
+                        if (c == '◎' || c == '※' || c == '←' || c == '△')
+                            Console.ForegroundColor = (i % 2 == 0) ? ConsoleColor.Cyan : ConsoleColor.Blue; // 깜빡이는 불빛
+                        else if (c == '〓')
+                            Console.ForegroundColor = ConsoleColor.DarkGray; // 화살대
+                        else if (c == '▓')
+                            Console.ForegroundColor = ConsoleColor.DarkYellow; // 활대
+                        else
+                            Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else if (weapon.WeaponName == "독이 뭍은 활" || weapon.WeaponName == "중독 화살")
+                    {
+                        if (c == '◐' || c == '◑' || c == '←' || c == '△')
+                            Console.ForegroundColor = (i % 2 == 0) ? ConsoleColor.DarkGreen : ConsoleColor.Green; // 깜빡이는 불빛
+                        else if (c == '〓')
+                            Console.ForegroundColor = ConsoleColor.DarkGray; // 화살대
+                        else if (c == '▓')
+                            Console.ForegroundColor = ConsoleColor.DarkYellow; // 활대
+                        else
+                            Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else if (weapon.WeaponName == "수리검")
+                    {
+                        if (c == '◆')
+                            Console.ForegroundColor = (i % 2 == 0) ? ConsoleColor.DarkGray : ConsoleColor.Gray;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    Console.Write(c);
+                }
             }
         }
 

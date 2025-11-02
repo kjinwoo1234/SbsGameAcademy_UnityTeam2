@@ -14,7 +14,13 @@ namespace MUD
             while (true)
             {
                 // 메인 메뉴 실행
-                string[] items = { "종료", "검      - 대마시아!", "지팡이  - 마법딜도 좋지만 물리딜도 좋다.", "활      - 리그 오브 레전드에 애쉬가 쓰던 활 이라는 전설이 있다.", "화살    - 그냥 화살이다.(뭘 바라는거지...?)", "방어구  - 아픈건 싫어서 방어구에 몰빵했습니다.", "물약    - 딸기향과 소다 향이 나는 물약이다" };
+                string[] items = { "종료\n",
+                                   "검      - 데마시아!\n",
+                                   "지팡이  - 마법딜도 좋지만 물리딜도 좋다.\n",
+                                   "활      - 리그 오브 레전드에 애쉬가 쓰던 활 이라는 전설이 있다.\n",
+                                   "화살    - 그냥 화살이다.(뭘 바라는거지...?)\n",
+                                   "방어구  - 아픈건 싫어서 방어구에 몰빵했습니다.\n",
+                                   "물약    - 딸기향과 소다 향이 나는 물약이다\n" };
                 int selectIndex = ExecuteMenu("인벤토리", items);
                 // 서브 메뉴 실행
                 switch (selectIndex)
@@ -22,27 +28,30 @@ namespace MUD
                     case 0: // 종료
                         return;
                     case 1: // 검
-                        string[] listSword = { "뒤로", "단검", "장검", "양날검", "검과 방패" };
+                        string[] listSword = { "뒤로\n", "단검\n", "장검\n", "양날검\n", "검과 방패" };
                         selectIndex = ExecuteMenu("인벤토리>검", listSword);
                         break;
                     case 2: // 지팡이
-                        string[] listStaff = { "뒤로", "땅 지팡이", "화염 지팡이", "바람 지팡이", "어둠 지팡이", "빛 지팡이" };
+                        string[] listStaff = { "뒤로\n", "땅 지팡이\n", "화염 지팡이\n",
+                                               "바람 지팡이\n", "어둠 지팡이\n","빛 지팡이" };
                         selectIndex = ExecuteMenu("인벤토리>지팡이", listStaff);
                         break;
                     case 3: // 활
-                        string[] listBow = { "뒤로", "기본 활", "다중발사 활", "빠른활", "데미지활" };
+                        string[] listBow = { "뒤로\n", "기본 활\n", "다중발사 활\n", "빠른활\n", "데미지활" };
                         selectIndex = ExecuteMenu("인벤토리>활", listBow);
                         break;
                     case 4: // 화살
-                        string[] listArrow = { "뒤로", "기본 화살", "화염 화살", "얼음 화살", "독 화살", "다크 화살" };
+                        string[] listArrow = { "뒤로\n", "기본 화살\n", "화염 화살\n", "얼음 화살\n", "독 화살\n", "다크 화살" };
                         selectIndex = ExecuteMenu("인벤토리>화살", listArrow);
                         break;
                     case 5: //방어구
-                        string[] listarmor = { "뒤로", "가죽 갑옷", "구리 갑옷", "철 갑옷", "?@#$% 갑옷" };
+                        string[] listarmor = { "뒤로\n", "가죽 갑옷\n", "구리 갑옷\n", "철 갑옷\n", "?@#$% 갑옷" };
                         selectIndex = ExecuteMenu("인벤토리>방어구", listarmor);
                         break;
                     case 6: //물약
-                        string[] listpotion = { "뒤로", "소형 체력 회복 포션", "중형 체력 회복 포션", "대형 체력 회복 포션", "", "소형 마나 회복 포션", "중형 마나 회복 포션", "대형 마나 회복 포션" };
+                        string[] listpotion = { "뒤로\n", "소형 체력 회복 포션", "중형 체력 회복 포션\n",
+                                                "대형 체력 회복 포션\n", "소형 마나 회복 포션\n", "중형 마나 회복 포션\n",
+                                                "대형 마나 회복 포션" };
                         selectIndex = ExecuteMenu("인벤토리>물약", listpotion);
                         break;
                 }

@@ -67,7 +67,8 @@ namespace Mud_game
             Player newPlayer = new Player
             {
                 Name = playerName,
-                Job = selectedJob
+                Job = selectedJob,
+                Stats = selectedJob.Stats
             };
 
             // --- 씬 종료 및 정리 ---
@@ -304,12 +305,7 @@ namespace Mud_game
     {
         public string Name { get; set; }
         public ICharacterJob Job { get; set; }
-    }
-
-    interface ICharacter
-    {
-        void writename();
-        void SelectCharacter();
+        public stat Stats { get; set; }
     }
 
     /// 직업의 공통 속성(스탯, 이름, 정보 표시)을 정의하는 인터페이스
@@ -324,19 +320,23 @@ namespace Mud_game
 
     public class stat
     {
+        public int MaxHp { get; set; }
         public int Hp { get; set; }
         public int Atk { get; set; }
+        public int MaxMp { get; set; }
         public int Mp { get; set; }
         public stat(int hp, int atk, int mp)
         {
+            this.MaxHp = hp;
             this.Hp = hp;
             this.Atk = atk;
+            this.MaxMp = mp;
             this.Mp = mp;
         }
     }
 
     // --- 직업 구현 클래스 ---
-    public class Swordsman : ICharacterJob
+    internal class Swordsman : ICharacterJob
     {
         public string JobName => "검사";
         public stat Stats => new stat(5, 3, 3); // 스탯 (★★★★★, ★★★☆☆, ★★★☆☆)
@@ -358,7 +358,7 @@ namespace Mud_game
         }
     }
 
-    public class Mage : ICharacterJob
+    internal class Mage : ICharacterJob
     {
         public string JobName => "마법사";
         public stat Stats => new stat(2, 5, 4); // 스탯 (★★☆☆☆, ★★★★★, ★★★★☆)
@@ -380,7 +380,7 @@ namespace Mud_game
         }
     }
 
-    public class Assassin : ICharacterJob
+    internal class Assassin : ICharacterJob
     {
         public string JobName => "암살자";
         public stat Stats => new stat(2, 3, 3); // 스탯 (★★☆☆☆, ★★★☆☆, ★★★☆☆)
@@ -402,7 +402,7 @@ namespace Mud_game
         }
     }
 
-    public class Archer : ICharacterJob
+    internal class Archer : ICharacterJob
     {
         public string JobName => "궁수";
         public stat Stats => new stat(3, 4, 2); // 스탯 (★★★☆☆, ★★★★☆, ★★☆☆☆)
@@ -428,7 +428,7 @@ namespace Mud_game
 
     /// 콘솔에 UI 요소를 그리는 static 도우미 클래스
     /// (씬 매니저가 이와 유사한 기능을 담당)
-    public static class ConsoleHelper
+    internal static class ConsoleHelper
     {
         
         /// 텍스트 그리기

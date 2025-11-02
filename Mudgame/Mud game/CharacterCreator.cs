@@ -67,8 +67,7 @@ namespace Mud_game
             Player newPlayer = new Player
             {
                 Name = playerName,
-                Job = selectedJob,
-                Stats = selectedJob.Stats
+                Job = selectedJob
             };
 
             // --- 씬 종료 및 정리 ---
@@ -305,7 +304,12 @@ namespace Mud_game
     {
         public string Name { get; set; }
         public ICharacterJob Job { get; set; }
-        public stat Stats { get; set; }
+    }
+
+    interface ICharacter
+    {
+        void writename();
+        void SelectCharacter();
     }
 
     /// 직업의 공통 속성(스탯, 이름, 정보 표시)을 정의하는 인터페이스
@@ -320,23 +324,19 @@ namespace Mud_game
 
     public class stat
     {
-        public int MaxHp { get; set; }
         public int Hp { get; set; }
         public int Atk { get; set; }
-        public int MaxMp { get; set; }
         public int Mp { get; set; }
         public stat(int hp, int atk, int mp)
         {
-            this.MaxHp = hp;
             this.Hp = hp;
             this.Atk = atk;
-            this.MaxMp = mp;
             this.Mp = mp;
         }
     }
 
     // --- 직업 구현 클래스 ---
-    internal class Swordsman : ICharacterJob
+    public class Swordsman : ICharacterJob
     {
         public string JobName => "검사";
         public stat Stats => new stat(5, 3, 3); // 스탯 (★★★★★, ★★★☆☆, ★★★☆☆)
@@ -350,15 +350,15 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★★★★");
+            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★★☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
         }
     }
 
-    internal class Mage : ICharacterJob
+    public class Mage : ICharacterJob
     {
         public string JobName => "마법사";
         public stat Stats => new stat(2, 5, 4); // 스탯 (★★☆☆☆, ★★★★★, ★★★★☆)
@@ -372,15 +372,15 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★☆☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★★★");
+            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★★★☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
         }
     }
 
-    internal class Assassin : ICharacterJob
+    public class Assassin : ICharacterJob
     {
         public string JobName => "암살자";
         public stat Stats => new stat(2, 3, 3); // 스탯 (★★☆☆☆, ★★★☆☆, ★★★☆☆)
@@ -394,15 +394,15 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★☆☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★★☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
         }
     }
 
-    internal class Archer : ICharacterJob
+    public class Archer : ICharacterJob
     {
         public string JobName => "궁수";
         public stat Stats => new stat(3, 4, 2); // 스탯 (★★★☆☆, ★★★★☆, ★★☆☆☆)
@@ -416,11 +416,11 @@ namespace Mud_game
             int statX = x + 30;
             ConsoleHelper.DrawText(statX, y, "스탯      ------------------");
             ConsoleHelper.DrawText(statX, y + 3, "체력      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 3, "★★★☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 3, Stats.Hp, 5);
             ConsoleHelper.DrawText(statX, y + 5, "데미지    ");
-            ConsoleHelper.DrawStars(statX + 10, y + 5, "★★★★☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 5, Stats.Atk, 5);
             ConsoleHelper.DrawText(statX, y + 7, "마나      ");
-            ConsoleHelper.DrawStars(statX + 10, y + 7, "★★☆☆☆");
+            ConsoleHelper.DrawStars(statX + 10, y + 7, Stats.Mp, 5);
         }
     }
 
@@ -428,7 +428,7 @@ namespace Mud_game
 
     /// 콘솔에 UI 요소를 그리는 static 도우미 클래스
     /// (씬 매니저가 이와 유사한 기능을 담당)
-    internal static class ConsoleHelper
+    public static class ConsoleHelper
     {
         
         /// 텍스트 그리기
@@ -462,23 +462,19 @@ namespace Mud_game
         }
 
         /// 스탯을 ★로 표시
-        public static void DrawStars(int x, int y, string starsString)
+        public static void DrawStars(int x, int y, int rating, int max)
         {
+            string stars = "";
+            stars += new string('★', rating);
+            stars += new string('☆', max - rating);
+
             DrawText(x, y, "|");
-
-            // 별 문자열을 분리하여 색상 적용
-            int filledStarsCount = starsString.Count(f => f == '★');
-            string filledStars = starsString.Substring(0, filledStarsCount);
-            string emptyStars = starsString.Substring(filledStarsCount);
-
             Console.ForegroundColor = ConsoleColor.Yellow;
-            DrawText(x + 1, y, filledStars);
-
+            DrawText(x + 1, y, stars.Substring(0, rating));
             Console.ForegroundColor = ConsoleColor.Gray;
-            DrawText(x + 1 + filledStarsCount, y, emptyStars);
-
+            DrawText(x + 1 + rating, y, stars.Substring(rating));
             Console.ResetColor();
-            DrawText(x + 1 + starsString.Length, y, "|");
+            DrawText(x + 1 + max, y, "|");
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Mud_game
     /// 캐릭터 생성 전체 과정을 관리
     public class CharacterCreator
     {
-        /*internal class Program Main
+        internal class Program Main
         {
             static void Main(string[] args)
             {
@@ -33,7 +33,7 @@ namespace Mud_game
                 // 4. 다음 씬(예: 마을, 전투 등)으로 넘어가는 로직 위치
                 // GameManager.LoadScene("TownScene");  <-- 이런 식으로 나중에 연결
             }
-        }*/
+        }
         // 선택 가능한 직업 목록
         private List<ICharacterJob> availableJobs;
         public CharacterCreator()

@@ -34,7 +34,7 @@ namespace Mud_game
         // 스킬 데이터베이스 초기화 메서드
         private static void InitializeSkills()
         {
-            _skillDatabase.Add("inCombatHide", new Skill
+            skillDatabase.Add("inCombatHide", new Skill
             {
                 SkillName = "은신",
                 Type = SkillType.Combat,
@@ -42,7 +42,7 @@ namespace Mud_game
                 MpCost = 12
             });
 
-            _skillDatabase.Add("inFieldHide", new Skill
+            skillDatabase.Add("inFieldHide", new Skill
             {
                 SkillName = "은신",
                 Type = SkillType.Special,
@@ -50,7 +50,7 @@ namespace Mud_game
                 MpCost = 8
             });
 
-            _skillDatabase.Add("doubleJump", new Skill
+            skillDatabase.Add("doubleJump", new Skill
             {
                 SkillName = "이단 점프",
                 Type = SkillType.Special,
@@ -58,7 +58,7 @@ namespace Mud_game
                 MpCost = 8
             });
 
-            _skillDatabase.Add("ladderInstall", new Skill
+            skillDatabase.Add("ladderInstall", new Skill
             {
                 SkillName = "사다리 설치",
                 Type = SkillType.Special,
@@ -66,7 +66,7 @@ namespace Mud_game
                 MpCost = 0
             });
 
-            _skillDatabase.Add("Detect Trap", new Skill
+            skillDatabase.Add("Detect Trap", new Skill
             {
                 SkillName = "함정 탐지", 
                 Type = SkillType.Special,
@@ -74,7 +74,7 @@ namespace Mud_game
                 MpCost = 5
             });
 
-            _skillDatabase.Add("Thrust", new Skill
+            skillDatabase.Add("Thrust", new Skill
             {
                 SkillName = "찌르기", 
                 Type = SkillType.Combat,
@@ -82,7 +82,7 @@ namespace Mud_game
                 MpCost = 5
             });
 
-            _skillDatabase.Add("Smite", new Skill
+            skillDatabase.Add("Smite", new Skill
             {
                 SkillName = "강타", 
                 Type = SkillType.Combat,
@@ -90,7 +90,7 @@ namespace Mud_game
                 MpCost = 10
             });
 
-            _skillDatabase.Add("shiledBash", new Skill
+            skillDatabase.Add("shiledBash", new Skill
             {
                 SkillName = "방패 밀치기", 
                 Type = SkillType.Combat,
@@ -98,7 +98,7 @@ namespace Mud_game
                 MpCost = 7
             });
 
-            _skillDatabase.Add("Fireball", new Skill
+            skillDatabase.Add("Fireball", new Skill
             {
                 SkillName = "파이어볼", 
                 Type = SkillType.Combat,
@@ -106,7 +106,7 @@ namespace Mud_game
                 MpCost = 15
             });
 
-            _skillDatabase.Add("inFieldHeal", new Skill
+            skillDatabase.Add("inFieldHeal", new Skill
             {
                 SkillName = "힐", 
                 Type = SkillType.Special,
@@ -114,7 +114,7 @@ namespace Mud_game
                 MpCost = 18
             });
 
-            _skillDatabase.Add("inCombatHeal", new Skill
+            skillDatabase.Add("inCombatHeal", new Skill
             {
                 SkillName = "힐", 
                 Type = SkillType.Combat,
@@ -122,7 +122,7 @@ namespace Mud_game
                 MpCost = 18
             });
 
-            _skillDatabase.Add("backStep", new Skill
+            skillDatabase.Add("backStep", new Skill
             {
                 SkillName = "백스텝", 
                 Type = SkillType.Combat,
@@ -130,7 +130,7 @@ namespace Mud_game
                 MpCost = 25
             });
 
-            _skillDatabase.Add("IronDefense", new Skill
+            skillDatabase.Add("IronDefense", new Skill
             {
                 SkillName = "철벽", 
                 Type = SkillType.Combat,
@@ -138,7 +138,7 @@ namespace Mud_game
                 MpCost = 10
             });
 
-            _skillDatabase.Add("shadowDance", new Skill
+            skillDatabase.Add("shadowDance", new Skill
             {
                 SkillName = "그림자 이동", 
                 Type = SkillType.Combat,
@@ -146,7 +146,7 @@ namespace Mud_game
                 MpCost = 12
             });
 
-            _skillDatabase.Add("Desperate", new Skill
+            skillDatabase.Add("Desperate", new Skill
             {
                 SkillName = "발악", 
                 Type = SkillType.Combat,
@@ -154,7 +154,7 @@ namespace Mud_game
                 MpCost = 10
             });
 
-            _skillDatabase.Add("doubleStrike", new Skill
+            skillDatabase.Add("doubleStrike", new Skill
             {
                 SkillName = "쌍격", 
                 Type = SkillType.Combat,
@@ -162,7 +162,7 @@ namespace Mud_game
                 MpCost = 15
             });
 
-            _skillDatabase.Add("energBolt", new Skill
+            skillDatabase.Add("energBolt", new Skill
             {
                 SkillName = "에너지 볼트", 
                 Type = SkillType.Combat,
@@ -170,7 +170,7 @@ namespace Mud_game
                 MpCost = 10
             });
 
-            _skillDatabase.Add("Piercing", new Skill
+            skillDatabase.Add("Piercing", new Skill
             {
                 SkillName = "저격", 
                 Type = SkillType.Combat,
@@ -178,7 +178,7 @@ namespace Mud_game
                 MpCost = 18
             });
 
-            _skillDatabase.Add("Glacius", new Skill
+            skillDatabase.Add("Glacius", new Skill
             {
                 SkillName = "글라시우스", 
                 Type = SkillType.Combat,

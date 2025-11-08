@@ -322,7 +322,7 @@ namespace Mud_game
 
             string resultMessage = "";
 
-             switch의 case를 SkillName(한글)으로 수정
+            //switch의 case를 SkillName(한글)으로 수정
             switch (skill.SkillName)
             {
                 case "함정 탐지":
